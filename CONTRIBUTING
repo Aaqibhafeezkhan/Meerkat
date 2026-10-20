@@ -1,0 +1,93 @@
+# Contributing to Meerkat
+
+This guide explains our workflow. It's designed to be lightweight so you can drop in, pick up a task, and submit your work without needing a lot of coordination.
+
+## Finding Something to Do
+
+We use **GitHub Issues** as our task board. Every piece of work, from fixing a typo to adding a new feature, is tracked as an issue.
+
+### Claiming an Issue
+To avoid duplicate work, **please claim an issue before you start**:
+
+1.  Find an issue you'd like to work on.
+2.  Leave a comment like: *"I'd like to work on this."*
+3.  A maintainer will assign the issue to you. (You can start work before a maintainer assigns you as long as your claim message was first)
+
+Once assigned, the issue is yours. If you can no longer work on it, please comment so we can unassign you and free it up for someone else.
+
+## Development Workflow
+
+We follow a standard fork‑and‑pull‑request workflow. Because `main` is protected, all changes must go through a pull request and receive at least one approval.
+
+### 1. Set Up Your Environment
+- Fork the repository to your own GitHub account.
+- Clone your fork locally:
+  ```bash
+  git clone https://github.com/Myst1cS04p/Meerkat.git
+  cd Meerkat
+  ```
+- Follow the setup instructions in the `README.md` to install dependencies and get the bot running locally.
+
+### 2. Create a Branch
+Create a descriptive branch for your work. Use a prefix that matches the issue type if you like:
+```bash
+git checkout -b fix/issue-123-short-description
+# or
+git checkout -b feat/issue-456-new-command
+```
+
+### 3. Make Your Changes
+- Keep changes focused on the issue you claimed. Small, single‑purpose PRs are much easier to review and merge.
+- Follow the existing code style (we use [insert linter/formatter, e.g., ESLint + Prettier / Black / etc.]). If you're unsure, look at nearby code.
+- Test your changes locally if possible. At minimum, make sure the bot starts and your change works as expected.
+
+### 4. Commit and Push
+Write clear commit messages. A good format is:
+```
+Short summary (50 chars or less)
+
+More detailed explanation if needed. Reference the issue number.
+Fixes #123
+```
+Then push to your fork:
+```bash
+git push origin your-branch-name
+```
+
+### 5. Open a Pull Request
+- Go to the original repository and open a pull request from your branch.
+- **Link the issue** in the PR description (e.g., `Closes #123`). This automatically closes the issue when merged.
+- Describe what you changed and why. If there's anything a reviewer should know (e.g., "I wasn't sure about X, open to feedback"), mention it.
+- A maintainer (or any other contributor) will review your PR. We aim to review as soon as posisble, but remember this is a volunteer project, so please be patient.
+
+### 6. Review and Merge
+- Address any review comments by pushing new commits to your branch.
+- Once approved, a maintainer will merge your PR.
+
+## 📏 Our Golden Rule: Keep It Small
+
+The success of this project depends on **small, well‑scoped tasks**. When creating a new issue (or breaking down an existing one), ask yourself:
+
+> "Can a person sit down and finish this in one go?"
+
+If the answer is no, break it into smaller issues. This makes it easy for anyone to contribute without needing to understand the whole codebase.
+
+## 🗣️ Communication
+
+- **Issue comments** are the primary place for discussion about a specific task. Use them to ask questions, share progress, or flag blockers.
+- **Pull request comments** are for code‑specific feedback.
+- For general questions or brainstorming, use the discord server.
+- Please be respectful!
+
+## 🏷️ Labels We Use
+
+| Label | Meaning |
+|-------|---------|
+| `good first issue` | Great for newcomers. |
+| `help wanted` | Ready for someone to claim. |
+| `bug` | Something isn't working. |
+| `enhancement` | New feature or improvement. |
+| `documentation` | Docs‑only changes. |
+| `needs-triage` | Not yet reviewed by a maintainer. |
+| `in progress` | Someone is actively working on it. |
+| `blocked` | Waiting on something else. |
