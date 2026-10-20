@@ -38,7 +38,7 @@ git checkout -b feat/issue-456-new-command
 
 ### 3. Make Your Changes
 - Keep changes focused on the issue you claimed. Small, single‑purpose PRs are much easier to review and merge.
-- Follow the existing code style (we use [insert linter/formatter, e.g., ESLint + Prettier / Black / etc.]). If you're unsure, look at nearby code.
+- Follow the existing code style (we use Biome). If you're unsure, look at nearby code.
 - Test your changes locally if possible. At minimum, make sure the bot starts and your change works as expected.
 
 ### 4. Commit and Push
