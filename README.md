@@ -3,7 +3,7 @@
 > A community‑built bot for Accountability Corner
 
 [![Contributions Welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg)](CONTRIBUTING.md)
-[![License: GNU 3.0](LICENSE)
+[License: GNU 3.0](LICENSE)
 
 ## About
 
