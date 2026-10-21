@@ -22,7 +22,7 @@ Meerkat is a custom bot built for our community. It handles newbie initiation, t
 > Check the [Issues](../../issues) tab for what's being worked on.
 
 
-## 🚀 Getting Started
+## Getting Started
 
 Follow these steps to run the bot locally.
 
@@ -96,7 +96,7 @@ Follow these steps to run the bot locally.
 
 > If you use `uv` or `make`, wrap these in `uv run ...` or a `Makefile`—but plain commands are fine to start.
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 .
@@ -114,7 +114,7 @@ Follow these steps to run the bot locally.
 └── CONTRIBUTING.md      # How to contribute
 ```
 
-## 🤝 Contributing
+## Contributing
 
 We'd love your help! This project is designed for **casual, drop‑in contributions**. You don't need to be a maintainer or commit to a schedule.
 
