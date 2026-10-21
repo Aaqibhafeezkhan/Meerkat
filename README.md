@@ -1,5 +1,7 @@
 # Meerkat
 
+> NOTE: Setup is in progress. we are not open to contributions yet. 
+
 > A community‑built bot for Accountability Corner
 
 [![Contributions Welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg)](CONTRIBUTING.md)
