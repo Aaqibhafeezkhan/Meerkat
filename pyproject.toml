@@ -1,0 +1,27 @@
+[project]
+name = "Meerkat"
+version = "0.1.0"
+description = "A community-built Discord bot for accountability corner"
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "GNU 3.0" }
+
+# Runtime dependencies are listed in requirements.txt so contributors can install
+# with a single familiar command. Keep this file focused on tooling config.
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+src = ["bot", "tests"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]  # pycodestyle, pyflakes, import sort, pyupgrade, bugbear
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+addopts = "-ra --strict-markers --strict-config"
