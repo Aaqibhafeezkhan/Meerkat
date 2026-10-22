@@ -39,7 +39,7 @@ Follow these steps to run the bot locally.
 1. **Fork and clone the repository**
    ```bash
    git clone https://github.com/Myst1cS04p/Meerkat.git
-   cd REPO-NAME
+   cd Meerkat
    ```
 
 
