@@ -1,8 +1,6 @@
 import asyncio
-import logging
 
 import discord
-from discord import app_commands
 from discord.ext import commands
 
 from bot.config import get_guild_id, get_token, logger
@@ -58,6 +56,3 @@ if __name__ == "__main__":
         asyncio.run(main())
     except KeyboardInterrupt:
         logger.info("Bot stopped by user.")
-
-
-        

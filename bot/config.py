@@ -33,4 +33,4 @@ def get_guild_id() -> int | None:
     try:
         return int(raw)
     except ValueError:
-        raise RuntimeError(f"GUILD_ID must be a number, got: {raw!r}")
+        raise RuntimeError(f"GUILD_ID must be a number, got: {raw!r}") from None
