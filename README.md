@@ -4,6 +4,7 @@
 
 > A community‑built bot for Accountability Corner
 
+[![CI](https://github.com/Myst1cS04p/Meerkat/actions/workflows/ci.yml/badge.svg)](https://github.com/Myst1cS04p/Meerkat/actions/workflows/ci.yml)
 [![Contributions Welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg)](CONTRIBUTING.md)
 [License: GNU 3.0](LICENSE)
 
