@@ -21,6 +21,7 @@ Meerkat is a custom bot built for our community. It handles newbie initiation, t
 - **Reminders:** People can set it up sot hat the bot pings them if after a certain point if a task is not done. 
 - **TDL templates:** Since people like customizability.
 - **External linking:** The bot has an API that you can use to hook up your local on-device tdl to the bot so that everything stays in sync. (MAYBE)
+- **VC Time Tracking:** You can sit in a designated voice channel to signal to the bot you are actively studying and the bot will count that time for you!
 
 > Check the [Issues](../../issues) tab for what's being worked on.
 
@@ -97,7 +98,7 @@ Follow these steps to run the bot locally.
 | `ruff check --fix .` | Lint and auto‑fix what's fixable |
 | `pytest` | Run the test suite |
 
-> If you use `uv` or `make`, wrap these in `uv run ...` or a `Makefile`—but plain commands are fine to start.
+> If you use `uv` or `make`, wrap these in `uv run ...` or a `Makefile`
 
 ## Project Structure
 
@@ -125,7 +126,7 @@ We'd love your help! This project is designed for **casual, drop‑in contributi
 2. **Comment to claim it** so we know it's being worked on.
 3. **Open a pull request** when you're done.
 
-For the full workflow—branch naming, commit style, review process, and our labeling system—see **[CONTRIBUTING.md](CONTRIBUTING.md)**.
+For the full workflow see **[CONTRIBUTING.md](CONTRIBUTING.md)**.
 
 ### Code Style
 
