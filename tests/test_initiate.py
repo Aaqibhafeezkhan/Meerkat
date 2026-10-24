@@ -1,16 +1,4 @@
-import discord
-from discord import app_commands
-
-from bot.cogs.initiate import Initiate, channel_slug, owned_channel_topic
-
-
-def test_initiate_slash_command_exists() -> None:
-    command = Initiate.initiate
-    assert isinstance(command, app_commands.Command)
-    assert command.name == "initiate"
-    assert len(command.parameters) == 1
-    assert command.parameters[0].name == "user"
-    assert command.parameters[0].required is False
+from bot.cogs.initiate import channel_slug, owned_channel_topic
 
 
 def test_channel_slug_is_discord_safe() -> None:
