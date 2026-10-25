@@ -11,7 +11,7 @@ CHANNEL_TOPIC_PREFIX = "meerkat-owner:"
 
 def channel_slug(name: str | discord.Member) -> str:
     """Create a stable, Discord-safe channel slug from a name or member."""
-    display_name = name.display_name if isinstance(name, discord.Member) else name
+    display_name = name if isinstance(name, str) else name.display_name
     slug = re.sub(r"[^a-z0-9-]+", "-", display_name.lower()).strip("-")
     return (slug or "member")[:80].strip("-") or "member"
 
