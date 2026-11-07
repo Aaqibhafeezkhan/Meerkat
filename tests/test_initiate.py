@@ -1,5 +1,7 @@
-from bot.config import get_optional_id
+import pytest
+
 from bot.cogs.initiate import channel_slug, owned_channel_topic
+from bot.config import get_optional_id
 
 
 def test_channel_slug_is_discord_safe() -> None:
@@ -25,9 +27,5 @@ def test_get_optional_id_parses_discord_id(monkeypatch) -> None:
 
 def test_get_optional_id_rejects_invalid_value(monkeypatch) -> None:
     monkeypatch.setenv("TDL_CATEGORY_ID", "not-a-number")
-    try:
+    with pytest.raises(RuntimeError, match="TDL_CATEGORY_ID must be a number"):
         get_optional_id("TDL_CATEGORY_ID")
-    except RuntimeError as error:
-        assert "TDL_CATEGORY_ID must be a number" in str(error)
-    else:
-        raise AssertionError("Invalid category IDs must raise RuntimeError")
