@@ -5,7 +5,7 @@
 > A community‑built bot for Accountability Corner
 
 [![CI](https://github.com/Myst1cS04p/Meerkat/actions/workflows/ci.yml/badge.svg)](https://github.com/Myst1cS04p/Meerkat/actions/workflows/ci.yml)
-[![Contributions Welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg)](CONTRIBUTING.md)
+[![Contributions Welcome](https://img.shields.io/badge/Contributions-welcome-brightgreen.svg)](CONTRIBUTING.md)
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 
 ## About
@@ -76,7 +76,9 @@ Follow these steps to run the bot locally.
    | Variable | Description |
    |----------|-------------|
    | `DISCORD_TOKEN` | Your bot token from the Developer Portal |
-   | `GUILD_ID` | (Optional) A test server ID for faster slash‑command sync |
+   | `GUILD_ID` | (Optional) A test server ID for faster slash-command sync |
+   | `TDL_CATEGORY_ID` | Discord category ID for personal TDL channels |
+   | `MONTHLIES_CATEGORY_ID` | Discord category ID for personal monthlies channels |
    | `LOG_LEVEL` | Logging verbosity (`DEBUG`, `INFO`, `WARNING`, `ERROR`) |
 
    > **Never commit your `.env` file or token.** `.env` is already in `.gitignore`.
@@ -95,7 +97,7 @@ Follow these steps to run the bot locally.
 | `python -m bot` | Start the bot |
 | `ruff check .` | Lint the codebase |
 | `ruff format .` | Format the codebase |
-| `ruff check --fix .` | Lint and auto‑fix what's fixable |
+| `ruff check --fix .` | Lint and auto-fix what's fixable |
 | `pytest` | Run the test suite |
 
 > If you use `uv` or `make`, wrap these in `uv run ...` or a `Makefile`
@@ -109,18 +111,17 @@ Follow these steps to run the bot locally.
 │   ├── __main__.py      # Entry point (python -m bot)
 │   ├── cogs/            # Command groups / extensions, one file per feature
 │   ├── events/          # Event handlers (on_ready, on_message, etc.)
-│   └── services/        # Business logic (API calls, database, etc.)
+│   └── services/        # Business logic (API calls, etc.)
 ├── tests/               # Test files
 ├── .env.example         # Example environment variables
 ├── pyproject.toml       # Project metadata + Ruff/pytest config
 ├── requirements.txt     # Runtime dependencies
 ├── requirements-dev.txt # Dev dependencies (ruff, pytest, ...)
 └── CONTRIBUTING.md      # How to contribute
-```
 
 ## Contributing
 
-We'd love your help! This project is designed for **casual, drop‑in contributions**. You don't need to be a maintainer or commit to a schedule.
+We'd love your help! This project is designed for **casual, drop-in contributions**. You don't need to be a maintainer or commit to a schedule.
 
 1. **Browse the [Issues](../../issues)** and find something labeled `good first issue`.
 2. **Comment to claim it** so we know it's being worked on.
