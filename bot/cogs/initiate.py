@@ -4,6 +4,8 @@ import discord
 from discord import app_commands
 from discord.ext import commands
 
+from bot.config import MONTHLIES_CATEGORY_ID, TDL_CATEGORY_ID
+
 # Temporary ownership markers stored in channel topics. This is intentionally
 # replaceable if Meerkat moves channel ownership tracking into a database.
 CHANNEL_TOPIC_PREFIX = "meerkat-owner:"
@@ -40,7 +42,6 @@ class Initiate(commands.Cog):
         try:
             await member.send(message)
         except (discord.Forbidden, discord.HTTPException):
-            # Members may have DMs disabled; joining should not break the bot.
             return
 
     @app_commands.command(
@@ -112,18 +113,15 @@ class Initiate(commands.Cog):
             )
 
         slug = channel_slug(channel_name or target.display_name)
-        # TDL and monthlies channels share the member's slug; their categories
-        # distinguish the channel types. If a category is not configured yet,
-        # Discord creates the channel at the server root.
-        tdl_category = next(
-            (category for category in interaction.guild.categories
-             if category.name.casefold() in {"tdl", "tdls"}),
-            None,
+        tdl_category = (
+            discord.utils.get(interaction.guild.categories, id=TDL_CATEGORY_ID)
+            if TDL_CATEGORY_ID is not None
+            else None
         )
-        monthlies_category = next(
-            (category for category in interaction.guild.categories
-             if category.name.casefold() in {"monthlies", "monthly"}),
-            None,
+        monthlies_category = (
+            discord.utils.get(interaction.guild.categories, id=MONTHLIES_CATEGORY_ID)
+            if MONTHLIES_CATEGORY_ID is not None
+            else None
         )
 
         created: list[discord.TextChannel] = []
