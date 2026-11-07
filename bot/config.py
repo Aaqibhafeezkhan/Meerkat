@@ -34,3 +34,18 @@ def get_guild_id() -> int | None:
         return int(raw)
     except ValueError:
         raise RuntimeError(f"GUILD_ID must be a number, got: {raw!r}") from None
+
+
+def get_optional_id(name: str) -> int | None:
+    """Return an optional Discord resource ID from the environment."""
+    raw = os.getenv(name)
+    if not raw:
+        return None
+    try:
+        return int(raw)
+    except ValueError:
+        raise RuntimeError(f"{name} must be a number, got: {raw!r}") from None
+
+
+TDL_CATEGORY_ID = get_optional_id("TDL_CATEGORY_ID")
+MONTHLIES_CATEGORY_ID = get_optional_id("MONTHLIES_CATEGORY_ID")
