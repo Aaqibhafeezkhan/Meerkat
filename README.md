@@ -5,7 +5,7 @@
 > A community‑built bot for Accountability Corner
 
 [![CI](https://github.com/Myst1cS04p/Meerkat/actions/workflows/ci.yml/badge.svg)](https://github.com/Myst1cS04p/Meerkat/actions/workflows/ci.yml)
-[![Contributions Welcome](https://img.shields.io/badge/Contributions-welcome-brightgreen.svg)](CONTRIBUTING.md)
+[![Contributions Welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg)](CONTRIBUTING.md)
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 
 ## About
@@ -118,6 +118,7 @@ Follow these steps to run the bot locally.
 ├── requirements.txt     # Runtime dependencies
 ├── requirements-dev.txt # Dev dependencies (ruff, pytest, ...)
 └── CONTRIBUTING.md      # How to contribute
+```
 
 ## Contributing
 
